@@ -24,8 +24,9 @@ connectDB()
 // app.use(helmet())
 const allowedOrigins = [
   'http://localhost:3000',
-  'https://livelearning.vercel.app',
-  'https://live-learning-9v82791kd-ayush-7903s-projects.vercel.app',
+ 
+  'https://live-learning.vercel.app'
+  
   'https://live-learning-9bmk0re72-ayush-7903s-projects.vercel.app'
   
   
