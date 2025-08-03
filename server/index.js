@@ -21,23 +21,18 @@ const PORT = process.env.PORT || 5000
 connectDB()
 
 // Security middleware
-app.use(helmet())
-const allowedOrigins = [
-  'http://localhost:3000',
-  'https://livelearning.vercel.app',
-  'https://live-learning-9v82791kd-ayush-7903s-projects.vercel.app'
-];
+// app.use(helmet())
+// const allowedOrigins = [
+//   'http://localhost:3000',
+//   'https://livelearning.vercel.app',
+//   'https://live-learning-9v82791kd-ayush-7903s-projects.vercel.app'
+// ];
 
 app.use(cors({
-  // origin: function (origin, callback) {
-  //   if (!origin || allowedOrigins.includes(origin)) {
-  //     callback(null, true);
-  //   } else {
-  //     callback(new Error('Not allowed by CORS'));
-  //   }
-  // },
-  // credentials: true
-   origin: '*'
+  origin: function (origin, callback) {
+    callback(null, origin); // Reflect the request origin
+  },
+  credentials: true
 }));
 
 
