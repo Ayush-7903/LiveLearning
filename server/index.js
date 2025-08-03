@@ -25,7 +25,7 @@ connectDB()
 const allowedOrigins = [
   'http://localhost:3000',
  
-  'https://live-learning.vercel.app'
+  'https://live-learning.vercel.app',
   
   'https://live-learning-9bmk0re72-ayush-7903s-projects.vercel.app'
   
